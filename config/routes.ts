@@ -4,7 +4,7 @@
     layout: false,
     routes: [
       { path: '/user/login', component: './user/login' },
-      // { path: '/user/register', component: './User/Register' },
+      { path: '/user/register', component: './user/register' },
     ],
   },
   { path: '/welcome', icon: 'smile', component: './Welcome', name: '欢迎页' },

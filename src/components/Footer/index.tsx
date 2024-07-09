@@ -1,12 +1,15 @@
 import { GithubOutlined } from '@ant-design/icons';
 import { DefaultFooter } from '@ant-design/pro-components';
 import React from 'react';
+import padding from "@maplibre/maplibre-gl-style-spec/src/util/padding";
 
 const Footer: React.FC = () => {
   return (
     <DefaultFooter
       style={{
         background: 'none',
+        height: '12vh',
+        margin:"0"
       }}
       copyright="Powered by Ant Desgin"
       links={[
@@ -32,5 +35,13 @@ const Footer: React.FC = () => {
     />
   );
 };
+<style>
+  .css-dev-only-do-not-override-m4timi{
+  {
+    margin:'10px'
+  }
+}
+</style>
+
 
 export default Footer;
