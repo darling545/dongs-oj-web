@@ -17,6 +17,18 @@ declare namespace API {
     message?: string;
   };
 
+  type BaseResponsePageQuestion_ = {
+    code?: number;
+    data?: PageQuestion_;
+    message?: string;
+  };
+
+  type BaseResponsePageQuestionVo_ = {
+    code?: number;
+    data?: PageQuestionVo_;
+    message?: string;
+  };
+
   type BaseResponsePageUser_ = {
     code?: number;
     data?: PageUser_;
@@ -26,6 +38,12 @@ declare namespace API {
   type BaseResponsePageUserVo_ = {
     code?: number;
     data?: PageUserVo_;
+    message?: string;
+  };
+
+  type BaseResponseString_ = {
+    code?: number;
+    data?: string;
     message?: string;
   };
 
@@ -55,6 +73,17 @@ declare namespace API {
     id?: number;
   };
 
+  type JudgeCase = {
+    input?: string;
+    output?: string;
+  };
+
+  type JudgeConfig = {
+    memoryLimit?: number;
+    stackLimit?: number;
+    timeLimit?: number;
+  };
+
   type LoginUserVo = {
     createTime?: string;
     id?: number;
@@ -70,6 +99,32 @@ declare namespace API {
   type OrderItem = {
     asc?: boolean;
     column?: string;
+  };
+
+  type PageQuestion_ = {
+    countId?: string;
+    current?: number;
+    maxLimit?: number;
+    optimizeCountSql?: boolean;
+    orders?: OrderItem[];
+    pages?: number;
+    records?: Question[];
+    searchCount?: boolean;
+    size?: number;
+    total?: number;
+  };
+
+  type PageQuestionVo_ = {
+    countId?: string;
+    current?: number;
+    maxLimit?: number;
+    optimizeCountSql?: boolean;
+    orders?: OrderItem[];
+    pages?: number;
+    records?: QuestionVo[];
+    searchCount?: boolean;
+    size?: number;
+    total?: number;
   };
 
   type PageUser_ = {
@@ -96,6 +151,61 @@ declare namespace API {
     searchCount?: boolean;
     size?: number;
     total?: number;
+  };
+
+  type Question = {
+    acceptedNum?: number;
+    createTime?: string;
+    favourNum?: number;
+    id?: number;
+    isDelete?: number;
+    judgeCase?: string;
+    judgeConfig?: string;
+    questionAnswer?: string;
+    questionContent?: string;
+    questionLevel?: string;
+    questionTags?: string;
+    questionTitle?: string;
+    submitNum?: number;
+    thumbNum?: number;
+    updateTime?: string;
+    userId?: number;
+  };
+
+  type QuestionQueryRequest = {
+    acceptedNum?: number;
+    current?: number;
+    id?: number;
+    pageSize?: number;
+    questionLevel?: string;
+    questionTags?: string[];
+    questionTitle?: string;
+    sortField?: string;
+    sortOrder?: string;
+    submitNum?: number;
+  };
+
+  type QuestionVo = {
+    acceptedNum?: number;
+    createTime?: string;
+    favourNum?: number;
+    id?: number;
+    judgeCase?: JudgeCase[];
+    judgeConfig?: JudgeConfig;
+    questionAnswer?: string;
+    questionContent?: string;
+    questionLevel?: string;
+    questionTags?: string[];
+    questionTitle?: string;
+    submitNum?: number;
+    thumbNum?: number;
+    updateTime?: string;
+    userId?: number;
+    userVO?: UserVo;
+  };
+
+  type uploadFileUsingPOSTParams = {
+    biz?: string;
   };
 
   type User = {

@@ -42,6 +42,9 @@ const UserAdminPage : React.FC = () => {
       title: 'id',
       dataIndex: 'id',
       valueType: 'text',
+      // 查询列隐藏
+      hideInSearch: true,
+      // 表单中隐藏
       hideInForm: true,
     },
     {
@@ -67,6 +70,7 @@ const UserAdminPage : React.FC = () => {
       title: '简介',
       dataIndex: 'userProfile',
       valueType: 'textarea',
+      hideInSearch: true,
     },
     {
       title: '权限',

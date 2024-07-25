@@ -7,7 +7,7 @@
       { path: '/user/register', component: './user/register' },
     ],
   },
-  { path: '/welcome', icon: 'smile', component: './Welcome', name: '欢迎页' },
+  { path: '/questionView', icon: 'smile', component: './question/questionView', name: '题目列表' },
   {
     path: '/admin',
     icon: 'crown',
@@ -18,6 +18,6 @@
       { icon: 'table', path: '/admin/user', component: './user/manageTable', name: '用户管理' },
     ],
   },
-  { path: '/', redirect: '/welcome' },
+  { path: '/', redirect: '/questionView' },
   { path: '*', layout: false, component: './404' },
 ];
